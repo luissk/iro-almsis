@@ -1,0 +1,2 @@
+ERROR - 2024-06-03 08:32:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'X 2' (50 X 75 MM) - 100 HOJAS ARTESCO',descripcion='-',min=0,max=0,stock=38,u...' at line 1
+ERROR - 2024-06-03 09:14:51 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'X 55 YD',descripcion='-',min=0,max=0,stock=14,ubicacion='401',idum=1,idcatego...' at line 1

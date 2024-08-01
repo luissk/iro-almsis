@@ -1,0 +1,24 @@
+CRITICAL - 2023-08-21 10:31:14 --> The framework needs the following extension(s) installed and loaded: GD.
+#0 C:\xampp\htdocs\almsis\system\Images\Handlers\GDHandler.php(36): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('GD')
+#1 C:\xampp\htdocs\almsis\system\Config\Services.php(377): CodeIgniter\Images\Handlers\GDHandler->__construct(Object(Config\Images))
+#2 C:\xampp\htdocs\almsis\system\Config\BaseService.php(188): CodeIgniter\Config\Services::image('gd', Object(Config\Images), false)
+#3 C:\xampp\htdocs\almsis\system\Config\Services.php(370): CodeIgniter\Config\BaseService::getSharedInstance('image', NULL, NULL)
+#4 C:\xampp\htdocs\almsis\system\Config\BaseService.php(259): CodeIgniter\Config\Services::image()
+#5 C:\xampp\htdocs\almsis\app\Controllers\Producto.php(370): CodeIgniter\Config\BaseService::__callStatic('image', Array)
+#6 C:\xampp\htdocs\almsis\system\CodeIgniter.php(948): App\Controllers\Producto->processImage()
+#7 C:\xampp\htdocs\almsis\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#8 C:\xampp\htdocs\almsis\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\almsis\index.php(36): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-21 10:31:43 --> The framework needs the following extension(s) installed and loaded: GD.
+#0 C:\xampp\htdocs\almsis\system\Images\Handlers\GDHandler.php(36): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('GD')
+#1 C:\xampp\htdocs\almsis\system\Config\Services.php(377): CodeIgniter\Images\Handlers\GDHandler->__construct(Object(Config\Images))
+#2 C:\xampp\htdocs\almsis\system\Config\BaseService.php(188): CodeIgniter\Config\Services::image('gd', Object(Config\Images), false)
+#3 C:\xampp\htdocs\almsis\system\Config\Services.php(370): CodeIgniter\Config\BaseService::getSharedInstance('image', NULL, NULL)
+#4 C:\xampp\htdocs\almsis\system\Config\BaseService.php(259): CodeIgniter\Config\Services::image()
+#5 C:\xampp\htdocs\almsis\app\Controllers\Producto.php(370): CodeIgniter\Config\BaseService::__callStatic('image', Array)
+#6 C:\xampp\htdocs\almsis\system\CodeIgniter.php(948): App\Controllers\Producto->processImage()
+#7 C:\xampp\htdocs\almsis\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#8 C:\xampp\htdocs\almsis\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\almsis\index.php(36): CodeIgniter\CodeIgniter->run()
+#10 {main}

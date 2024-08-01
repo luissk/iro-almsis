@@ -1,0 +1,105 @@
+CRITICAL - 2023-08-22 11:02:16 --> Undefined variable $doc
+#0 C:\xampp\htdocs\almsis\app\Models\RequerimientoModel.php(150): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 150)
+#1 C:\xampp\htdocs\almsis\app\Controllers\Requerimiento.php(356): App\Models\RequerimientoModel->getSalidaPorCodigoReq('Y2H2A3')
+#2 C:\xampp\htdocs\almsis\system\CodeIgniter.php(948): App\Controllers\Requerimiento->buscarReqSalida()
+#3 C:\xampp\htdocs\almsis\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Requerimiento))
+#4 C:\xampp\htdocs\almsis\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\almsis\index.php(36): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2023-08-22 11:03:49 --> Undefined variable $doc
+#0 C:\xampp\htdocs\almsis\app\Models\RequerimientoModel.php(150): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 150)
+#1 C:\xampp\htdocs\almsis\app\Controllers\Requerimiento.php(356): App\Models\RequerimientoModel->getSalidaPorCodigoReq('Y2H2A3')
+#2 C:\xampp\htdocs\almsis\system\CodeIgniter.php(948): App\Controllers\Requerimiento->buscarReqSalida()
+#3 C:\xampp\htdocs\almsis\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Requerimiento))
+#4 C:\xampp\htdocs\almsis\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\almsis\index.php(36): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2023-08-22 11:04:15 --> Unsupported operand types: string + string
+#0 C:\xampp\htdocs\almsis\system\CodeIgniter.php(948): App\Controllers\Requerimiento->buscarReqSalida()
+#1 C:\xampp\htdocs\almsis\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Requerimiento))
+#2 C:\xampp\htdocs\almsis\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\almsis\index.php(36): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-08-22 11:04:19 --> Unsupported operand types: string + string
+#0 C:\xampp\htdocs\almsis\system\CodeIgniter.php(948): App\Controllers\Requerimiento->buscarReqSalida()
+#1 C:\xampp\htdocs\almsis\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Requerimiento))
+#2 C:\xampp\htdocs\almsis\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\almsis\index.php(36): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-08-22 11:04:41 --> Unsupported operand types: string + string
+#0 C:\xampp\htdocs\almsis\system\CodeIgniter.php(948): App\Controllers\Requerimiento->buscarReqSalida()
+#1 C:\xampp\htdocs\almsis\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Requerimiento))
+#2 C:\xampp\htdocs\almsis\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\almsis\index.php(36): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-08-22 11:04:46 --> Unsupported operand types: string + string
+#0 C:\xampp\htdocs\almsis\system\CodeIgniter.php(948): App\Controllers\Requerimiento->buscarReqSalida()
+#1 C:\xampp\htdocs\almsis\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Requerimiento))
+#2 C:\xampp\htdocs\almsis\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\almsis\index.php(36): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-08-22 12:24:47 --> Required parameter $idusuario follows optional parameter $idarea
+#0 C:\xampp\htdocs\almsis\system\Autoloader\Autoloader.php(294): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Required parame...', 'C:\\xampp\\htdocs...', 26)
+#1 C:\xampp\htdocs\almsis\system\Autoloader\Autoloader.php(294): include_once()
+#2 C:\xampp\htdocs\almsis\system\Autoloader\Autoloader.php(265): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\almsis\system\Autoloader\Autoloader.php(228): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Requ...')
+#4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Requ...')
+#5 C:\xampp\htdocs\almsis\system\Config\Factories.php(149): class_exists('App\\Models\\Requ...')
+#6 C:\xampp\htdocs\almsis\system\Config\Factories.php(115): CodeIgniter\Config\Factories::locateClass(Array, 'RequerimientoMo...')
+#7 C:\xampp\htdocs\almsis\system\Common.php(883): CodeIgniter\Config\Factories::__callStatic('models', Array)
+#8 C:\xampp\htdocs\almsis\app\Controllers\Requerimiento.php(19): model('RequerimientoMo...')
+#9 C:\xampp\htdocs\almsis\system\CodeIgniter.php(920): App\Controllers\Requerimiento->__construct()
+#10 C:\xampp\htdocs\almsis\system\CodeIgniter.php(434): CodeIgniter\CodeIgniter->createController()
+#11 C:\xampp\htdocs\almsis\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\almsis\index.php(36): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-08-22 12:25:41 --> Too few arguments to function App\Models\RequerimientoModel::listarRequerimientos(), 2 passed in C:\xampp\htdocs\almsis\app\Controllers\Requerimiento.php on line 50 and exactly 3 expected
+#0 C:\xampp\htdocs\almsis\app\Controllers\Requerimiento.php(50): App\Models\RequerimientoModel->listarRequerimientos('4', '')
+#1 C:\xampp\htdocs\almsis\system\CodeIgniter.php(948): App\Controllers\Requerimiento->requerimiento()
+#2 C:\xampp\htdocs\almsis\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Requerimiento))
+#3 C:\xampp\htdocs\almsis\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\almsis\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-08-22 12:45:41 --> Call to undefined function get_instance()
+#0 C:\xampp\htdocs\almsis\system\View\View.php(220): include()
+#1 C:\xampp\htdocs\almsis\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\almsis\system\Common.php(1250): CodeIgniter\View\View->render('requerimiento/h...', Array, true)
+#3 C:\xampp\htdocs\almsis\app\Views\template\layout.php(24): view('requerimiento/h...')
+#4 C:\xampp\htdocs\almsis\system\View\View.php(220): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\almsis\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 C:\xampp\htdocs\almsis\system\Common.php(1250): CodeIgniter\View\View->render('template/layout', Array, true)
+#7 C:\xampp\htdocs\almsis\app\Controllers\Requerimiento.php(54): view('template/layout', Array)
+#8 C:\xampp\htdocs\almsis\system\CodeIgniter.php(948): App\Controllers\Requerimiento->requerimiento()
+#9 C:\xampp\htdocs\almsis\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Requerimiento))
+#10 C:\xampp\htdocs\almsis\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\almsis\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-22 12:45:55 --> Call to undefined function get_instance()
+#0 C:\xampp\htdocs\almsis\system\View\View.php(220): include()
+#1 C:\xampp\htdocs\almsis\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\almsis\system\Common.php(1250): CodeIgniter\View\View->render('requerimiento/h...', Array, true)
+#3 C:\xampp\htdocs\almsis\app\Views\template\layout.php(24): view('requerimiento/h...')
+#4 C:\xampp\htdocs\almsis\system\View\View.php(220): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\almsis\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 C:\xampp\htdocs\almsis\system\Common.php(1250): CodeIgniter\View\View->render('template/layout', Array, true)
+#7 C:\xampp\htdocs\almsis\app\Controllers\Requerimiento.php(54): view('template/layout', Array)
+#8 C:\xampp\htdocs\almsis\system\CodeIgniter.php(948): App\Controllers\Requerimiento->requerimiento()
+#9 C:\xampp\htdocs\almsis\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Requerimiento))
+#10 C:\xampp\htdocs\almsis\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\almsis\index.php(36): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-22 12:53:25 --> Undefined property: CodeIgniter\View\View::$modeloRequerimiento
+#0 C:\xampp\htdocs\almsis\app\Views\requerimiento\hacer.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 112)
+#1 C:\xampp\htdocs\almsis\system\View\View.php(220): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\almsis\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\almsis\system\Common.php(1250): CodeIgniter\View\View->render('requerimiento/h...', Array, true)
+#4 C:\xampp\htdocs\almsis\app\Views\template\layout.php(24): view('requerimiento/h...')
+#5 C:\xampp\htdocs\almsis\system\View\View.php(220): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\almsis\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\almsis\system\Common.php(1250): CodeIgniter\View\View->render('template/layout', Array, true)
+#8 C:\xampp\htdocs\almsis\app\Controllers\Requerimiento.php(54): view('template/layout', Array)
+#9 C:\xampp\htdocs\almsis\system\CodeIgniter.php(948): App\Controllers\Requerimiento->requerimiento()
+#10 C:\xampp\htdocs\almsis\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Requerimiento))
+#11 C:\xampp\htdocs\almsis\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\almsis\index.php(36): CodeIgniter\CodeIgniter->run()
+#13 {main}

@@ -1,0 +1,54 @@
+CRITICAL - 2023-05-29 12:23:48 --> Undefined constant "App\Controllers\console"
+#0 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(948): App\Controllers\Producto->processImage()
+#1 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#2 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\almexterno\index.php(36): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-05-29 12:24:54 --> Undefined constant "App\Controllers\console"
+#0 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(948): App\Controllers\Producto->processImage()
+#1 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#2 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\almexterno\index.php(36): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-05-29 12:30:29 --> Undefined variable $name
+#0 C:\xampp\htdocs\almexterno\app\Controllers\Producto.php(364): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 364)
+#1 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(948): App\Controllers\Producto->processImage()
+#2 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#3 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\almexterno\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-05-29 12:45:29 --> explode() expects at least 2 arguments, 1 given
+#0 C:\xampp\htdocs\almexterno\app\Controllers\Producto.php(365): explode('20230505_100349...')
+#1 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(948): App\Controllers\Producto->processImage()
+#2 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#3 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\almexterno\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-05-29 12:45:57 --> explode() expects at least 2 arguments, 1 given
+#0 C:\xampp\htdocs\almexterno\app\Controllers\Producto.php(365): explode('20230505_100349...')
+#1 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(948): App\Controllers\Producto->processImage()
+#2 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#3 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\almexterno\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-05-29 12:46:19 --> explode() expects at least 2 arguments, 1 given
+#0 C:\xampp\htdocs\almexterno\app\Controllers\Producto.php(365): explode('20230505_100349...')
+#1 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(948): App\Controllers\Producto->processImage()
+#2 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#3 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\almexterno\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-05-29 12:46:51 --> explode() expects at least 2 arguments, 1 given
+#0 C:\xampp\htdocs\almexterno\app\Controllers\Producto.php(365): explode('20230505_100349...')
+#1 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(948): App\Controllers\Producto->processImage()
+#2 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#3 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\almexterno\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-05-29 12:48:01 --> explode() expects at least 2 arguments, 1 given
+#0 C:\xampp\htdocs\almexterno\app\Controllers\Producto.php(365): explode('20230505_135712...')
+#1 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(948): App\Controllers\Producto->processImage()
+#2 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#3 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\almexterno\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 {main}

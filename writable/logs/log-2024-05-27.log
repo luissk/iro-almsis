@@ -1,0 +1,11 @@
+CRITICAL - 2024-05-27 11:13:52 --> mysqli::query(): Argument #1 ($query) cannot be empty
+#0 C:\xampp\htdocs\almsis\system\Database\MySQLi\Connection.php(329): mysqli->query('')
+#1 C:\xampp\htdocs\almsis\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('')
+#2 C:\xampp\htdocs\almsis\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('')
+#3 C:\xampp\htdocs\almsis\app\Models\ProductoModel.php(99): CodeIgniter\Database\BaseConnection->query('')
+#4 C:\xampp\htdocs\almsis\app\Controllers\Producto.php(182): App\Models\ProductoModel->getProductos('')
+#5 C:\xampp\htdocs\almsis\system\CodeIgniter.php(948): App\Controllers\Producto->listProductosDT()
+#6 C:\xampp\htdocs\almsis\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#7 C:\xampp\htdocs\almsis\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\almsis\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}

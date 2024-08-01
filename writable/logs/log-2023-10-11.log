@@ -1,0 +1,7 @@
+CRITICAL - 2023-10-11 13:47:22 --> date_format(): Argument #1 ($object) must be of type DateTimeInterface, bool given
+#0 C:\xampp\htdocs\almsis\app\Controllers\Fua.php(45): date_format(false, 'Y-m-d')
+#1 C:\xampp\htdocs\almsis\system\CodeIgniter.php(948): App\Controllers\Fua->guardar()
+#2 C:\xampp\htdocs\almsis\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Fua))
+#3 C:\xampp\htdocs\almsis\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\almsis\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 {main}

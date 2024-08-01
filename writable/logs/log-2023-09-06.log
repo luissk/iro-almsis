@@ -1,0 +1,8 @@
+ERROR - 2023-09-06 12:35:56 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+CRITICAL - 2023-09-06 12:35:56 --> Call to a member function getRowArray() on bool
+#0 C:\xampp\htdocs\almsis\app\Controllers\Requerimiento.php(189): App\Models\UsuarioModel->getUsuario(NULL)
+#1 C:\xampp\htdocs\almsis\system\CodeIgniter.php(948): App\Controllers\Requerimiento->procesaRequerimiento()
+#2 C:\xampp\htdocs\almsis\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Requerimiento))
+#3 C:\xampp\htdocs\almsis\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\almsis\index.php(36): CodeIgniter\CodeIgniter->run()
+#5 {main}

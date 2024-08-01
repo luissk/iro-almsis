@@ -1,0 +1,24 @@
+ERROR - 2023-06-15 13:40:56 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?,?,?,?,?,?)' at line 2
+CRITICAL - 2023-06-15 13:40:56 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?,?,?,?,?,?)' at line 2
+#0 C:\xampp\htdocs\almexterno\system\Database\MySQLi\Connection.php(329): mysqli->query('insert into req...')
+#1 C:\xampp\htdocs\almexterno\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('insert into req...')
+#2 C:\xampp\htdocs\almexterno\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('insert into req...')
+#3 C:\xampp\htdocs\almexterno\app\Models\RequerimientoModel.php(14): CodeIgniter\Database\BaseConnection->query('insert into req...', Array)
+#4 C:\xampp\htdocs\almexterno\app\Controllers\Requerimiento.php(174): App\Models\RequerimientoModel->insertReq('2023-06-15', 'WJZ3U4', 'PARA ATENCION', '6', '24', 'ATENCION SIS')
+#5 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(948): App\Controllers\Requerimiento->procesaRequerimiento()
+#6 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Requerimiento))
+#7 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\almexterno\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2023-06-15 13:41:39 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?,?,?,?,?,?)' at line 2
+CRITICAL - 2023-06-15 13:41:39 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?,?,?,?,?,?)' at line 2
+#0 C:\xampp\htdocs\almexterno\system\Database\MySQLi\Connection.php(329): mysqli->query('insert into req...')
+#1 C:\xampp\htdocs\almexterno\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('insert into req...')
+#2 C:\xampp\htdocs\almexterno\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('insert into req...')
+#3 C:\xampp\htdocs\almexterno\app\Models\RequerimientoModel.php(14): CodeIgniter\Database\BaseConnection->query('insert into req...', Array)
+#4 C:\xampp\htdocs\almexterno\app\Controllers\Requerimiento.php(174): App\Models\RequerimientoModel->insertReq('2023-06-15', 'WJZ3U4', 'PARA ATENCION', '6', '24', 'ATENCION SIS')
+#5 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(948): App\Controllers\Requerimiento->procesaRequerimiento()
+#6 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Requerimiento))
+#7 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\almexterno\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}

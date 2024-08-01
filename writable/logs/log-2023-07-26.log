@@ -1,0 +1,11 @@
+ERROR - 2023-07-26 09:47:09 --> Error connecting to the database: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+CRITICAL - 2023-07-26 09:47:09 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+#0 C:\xampp\htdocs\almexterno\system\Database\BaseConnection.php(625): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\almexterno\app\Models\UsuarioModel.php(11): CodeIgniter\Database\BaseConnection->query('select * from u...')
+#2 C:\xampp\htdocs\almexterno\app\Controllers\Inicio.php(38): App\Models\UsuarioModel->validaUsuario('LCALDERONS')
+#3 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(948): App\Controllers\Inicio->index()
+#4 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+#5 C:\xampp\htdocs\almexterno\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\almexterno\index.php(36): CodeIgniter\CodeIgniter->run()
+#7 {main}
