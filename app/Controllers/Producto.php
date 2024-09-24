@@ -379,7 +379,7 @@ class Producto extends Controller{
                     ->resize(800, 800, true, 'height')
                     ->save('public/images/products/'.$idproducto.'/'.$name_img);
     
-                    $x_file->move(WRITEPATH . 'uploads');
+                    //$x_file->move(WRITEPATH . 'uploads');
     
                     /* $fileData = [
                         'name' =>  $x_file->getName(),

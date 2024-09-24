@@ -71,6 +71,13 @@ class SalidaModel extends Model{
         return $st;
     }
 
+    public function updatePdf($id, $fileId){
+        $query = "update salida set pdf=? where idsalida = ?";
+        $st = $this->db->query($query, [$fileId, $id]);
+
+        return $st;
+    }
+
     public function getSalidas($desc = '', $fecha_ini = '', $fecha_fin = ''){
         $condicion = "";
         if($desc != null){
@@ -97,7 +104,7 @@ class SalidaModel extends Model{
     }
 
     public function getSalida($idsalida){
-        $query = "select s.idsalida,s.fecha,s.fechareg,s.documento,s.idarea,s.comentario,s.status,
+        $query = "select s.idsalida,s.fecha,s.fechareg,s.documento,s.idarea,s.comentario,s.status,s.pdf,
         ar.area,ar.nombres,ar.apellidos,ar.dni 
         from salida s 
         inner join area ar on s.idarea=ar.idarea

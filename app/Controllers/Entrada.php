@@ -169,7 +169,7 @@ class Entrada extends Controller{
 
     public function pruebaDrive(){
         try {
-            putenv('GOOGLE_APPLICATION_CREDENTIALS=public/apis/subirarchivos-429815-982bf1f23734.json');
+            putenv('GOOGLE_APPLICATION_CREDENTIALS=public/apis/subirarchivos-429815-061baebbc2cd.json');
     
             $client = new Client();
             $client->useApplicationDefaultCredentials();
@@ -220,7 +220,7 @@ class Entrada extends Controller{
                     echo "<script>swal_alert('Atención', 'EL DOCUMENTO NO DEBE SER MAYOR A 2MB', 'info', 'Aceptar')</script>";
                 }else{
                     try {
-                        putenv('GOOGLE_APPLICATION_CREDENTIALS=public/apis/subirarchivos-429815-982bf1f23734.json');
+                        putenv('GOOGLE_APPLICATION_CREDENTIALS=public/apis/subirarchivos-429815-061baebbc2cd.json');
                 
                         $client = new Client();
                         $client->useApplicationDefaultCredentials();
@@ -279,7 +279,7 @@ class Entrada extends Controller{
         if( $this->request->isAJAX() ){
             if( $entrada = $this->modeloEntrada->getEntrada($_POST['id']) ){
                 try {
-                    putenv('GOOGLE_APPLICATION_CREDENTIALS=public/apis/subirarchivos-429815-982bf1f23734.json');
+                    putenv('GOOGLE_APPLICATION_CREDENTIALS=public/apis/subirarchivos-429815-061baebbc2cd.json');
             
                     $client = new Client();
                     $client->useApplicationDefaultCredentials();
@@ -303,5 +303,52 @@ class Entrada extends Controller{
             }
         }
     }
+
+    /* public function subiendoImg(){
+        $productos = $this->modeloProducto->getProductos();
+        $cont = 0;
+
+        ini_set('max_execution_time', 720);
+
+        foreach( $productos as $p ){
+            $id     = $p['idproducto'];
+            $codigo = $p['codigo'];
+            $img    = $p['img'];
+            $cont++;
+            
+            //if( $cont == 4 ) break;
+
+            if( $img != ""  ){
+                $carpeta = 'public/images/products/';
+                $ruta    = $carpeta.$id."/".$img;
+
+                try {
+                    putenv('GOOGLE_APPLICATION_CREDENTIALS=public/apis/subirarchivos-429815-061baebbc2cd.json');
+            
+                    $client = new Client();
+                    $client->useApplicationDefaultCredentials();
+                    $client->addScope(Drive::DRIVE);
+                    $driveService = new Drive($client);
+                    $fileMetadata = new Drive\DriveFile(array(
+                        'name' => $img,
+                        'parents' => array('1or12TrGbuy5ifvsQ8CQfLEVFzo12kKEn')
+                    ));
+                    
+                    $file = $driveService->files->create($fileMetadata, array(
+                        'data' => file_get_contents($ruta),
+                        'mimeType' => mime_content_type($ruta),
+                        'uploadType' => 'multipart',
+                        'fields' => 'id'));                      
+                    
+                    echo "$id/". $file->id ."<br>";
+
+                } catch (Exception $e) {
+                    echo "Error Message: " . $e;
+                }
+            }
+                
+        }
+    } */
+
 
 }

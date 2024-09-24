@@ -39,10 +39,18 @@ $doc_dni    = $salida['dni'];
                                 <label for="documento">Documento</label>
                                 <input type="text" name="documento" id="documento" maxlength="11" class="form-control" value="<?php echo $documento?>">
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <label for="comentario">Comentario</label>
                                 <input type="text" name="comentario" id="comentario" maxlength="200" class="form-control" value="<?php echo $comentario?>">
                             </div>
+                            <div class="col-sm-12 col-xl-4">
+                                <label for="comentario">Subir PDF</label>
+                                <input type="file" name="pdf" id="pdf" accept=".pdf" data-id="<?php echo $idsalida?>"> <button class="btn btn-sm btn-light" id="btnSavePdf">Guardar</button>
+                                <br>
+                                <div id="pdflink"></div>
+                            </div>
+                            <div id="msjpdf"></div>
+
                             <div class="col-sm-4 mt-2">
                                 <label for="area">Area</label>
                                 <select name="area" id="area" class="form-control select2">
@@ -169,6 +177,97 @@ $doc_dni    = $salida['dni'];
 </section>
 
 <script>
+$('#pdf').on('change', function(){
+    let tipos = ['application/pdf'];
+    let file = this.files[0];
+    let tipofile = file.type;
+    let sizefile = file.size;
+
+    //console.log(tipofile, sizefile);
+
+    if(!tipos.includes(tipofile)){
+        swal_alert('Atención', 'SOLO DOCUMENTOS PDF', 'info', 'Aceptar');
+        $(this).val('');
+        return false;
+    }
+    if(sizefile >= 2097152){
+        swal_alert('Atención', 'EL DOCUMENTO NO DEBE SER MAYOR A 2MB', 'info', 'Aceptar');
+        $(this).val('');
+        return false;
+    }
+});
+
+$("#btnSavePdf").on('click', function(e){
+    e.preventDefault();
+    let btn = document.querySelector('#btnSavePdf'),
+            txtbtn = btn.textContent,
+            btnHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>';
+        btn.setAttribute('disabled', 'disabled');
+        btn.innerHTML = `${btnHTML} Validando...`;
+
+    if( $("#pdf").val() == '' ){
+        swal_alert('Atención', 'SELECCIONE UN PDF', 'info', 'Aceptar');
+        btn.removeAttribute('disabled');
+        btn.innerHTML = txtbtn;
+        return;
+    }
+
+    const formData = new FormData();
+    formData.set('pdf', document.querySelector("#pdf").files[0]);
+    formData.set('id', $("#pdf").data('id'));
+
+    $.ajax({
+        type:'POST',
+        url: 'salida/procesaPdf',
+        data:formData,
+        cache:false,
+        contentType: false,
+        processData: false,
+        success:function(data){
+            //console.log("success");
+            //console.log(data);
+            $("#msjpdf").html(data);
+
+            $("#pdf").val("");
+            btn.removeAttribute('disabled');
+            btn.innerHTML = txtbtn;
+        }
+    });
+
+});
+
+function cargarPdf(){
+    $("#pdflink").html("cargando...");
+    $.post('salida/cargarPdf', {
+        id: $("#pdf").data('id')
+    }, function(data){
+        $("#pdflink").html(data);
+    })
+}
+
+cargarPdf();
+
+function eliminarPdf(fileid){
+    let objConfirm = {
+        title: '¿Estás seguro?',
+        text: "¿Vas a eliminar el pdf?",
+        icon: 'warning',
+        confirmButtonText: 'Sí, eliminar',
+        cancelButtonText: 'No',
+        funcion: function(){
+            $("#msjpdf").html("ELIMINANDO...");
+            $.post('salida/eliminarPdf', {
+                id: $("#pdf").data('id'),
+                fileid
+            }, function(data){
+                $("#msjpdf").html(data);               
+            });
+        }
+    };
+    swal_confirm(objConfirm);         
+}
+
+
 $(function(){
     $(".select2").select2({'theme':'bootstrap4'});
 

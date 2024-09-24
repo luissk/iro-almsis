@@ -1,0 +1,11 @@
+CRITICAL - 2024-09-24 08:28:05 --> Undefined variable $salida
+#0 C:\xampp\htdocs\almsis\app\Views\producto\modalDetalle.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 33)
+#1 C:\xampp\htdocs\almsis\system\View\View.php(220): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\almsis\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\almsis\system\Common.php(1250): CodeIgniter\View\View->render('producto/modalD...', Array, true)
+#4 C:\xampp\htdocs\almsis\app\Controllers\Producto.php(513): view('producto/modalD...', Array)
+#5 C:\xampp\htdocs\almsis\system\CodeIgniter.php(948): App\Controllers\Producto->detalleMov()
+#6 C:\xampp\htdocs\almsis\system\CodeIgniter.php(444): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#7 C:\xampp\htdocs\almsis\system\CodeIgniter.php(344): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\almsis\index.php(36): CodeIgniter\CodeIgniter->run()
+#9 {main}

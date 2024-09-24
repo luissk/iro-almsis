@@ -1,6 +1,9 @@
 <?php 
 namespace App\Controllers;
 
+use Google\Client;
+use Google\Service\Drive;
+
 use CodeIgniter\Controller;
 use App\Models\UsuarioModel;
 use App\Models\ProductoModel;
@@ -282,4 +285,115 @@ class Salida extends Controller{
 
         }
     }
+
+    public function procesaPdf(){
+        if( $this->request->isAJAX() ){
+            /* print_r($_POST);
+            print_r($_FILES); */
+            
+            if( $salida = $this->modeloSalida->getSalida($_POST['id']) ){
+                if( $salida['pdf'] != '' ){
+                    echo "<script>swal_alert('Atención', 'YA HAY UN DOCUMENTO PDF', 'info', 'Aceptar')</script>";
+                    exit();
+                }
+            }else{
+                echo "<script>swal_alert('Error', 'ALGO SALIO MAL', 'error', 'Aceptar')</script>";
+                exit();
+            }
+
+            if ( isset($_FILES['pdf']) && $_FILES['pdf']['error'] === UPLOAD_ERR_OK) {
+                $archivo = $_FILES['pdf']['tmp_name'];
+                $nombre  = $_FILES['pdf']['name'];
+                $tamanio = $_FILES['pdf']['size'];
+                $tipo    = $_FILES['pdf']['type'];
+                //$carpeta   = $_POST["carpeta"];
+
+                if( $tipo != 'application/pdf' ){
+                    echo "<script>swal_alert('Atención', 'SOLO DOCUMENTOS PDF', 'info', 'Aceptar')</script>";
+                }else if( $tamanio > 2097152 ){
+                    echo "<script>swal_alert('Atención', 'EL DOCUMENTO NO DEBE SER MAYOR A 2MB', 'info', 'Aceptar')</script>";
+                }else{
+                    try {
+                        putenv('GOOGLE_APPLICATION_CREDENTIALS=public/apis/subirarchivos-429815-061baebbc2cd.json');
+                
+                        $client = new Client();
+                        $client->useApplicationDefaultCredentials();
+                        $client->addScope(Drive::DRIVE);
+                        $driveService = new Drive($client);
+                        $fileMetadata = new Drive\DriveFile(array(
+                            'name' => $nombre,
+                            'parents' => array('1NA3Hmnlqqfdq7Af2Sd_i1u60syncWZ99')
+                        ));
+                        
+                        $file = $driveService->files->create($fileMetadata, array(
+                            'data' => file_get_contents($archivo),
+                            'mimeType' => $tipo,
+                            'uploadType' => 'multipart',
+                            'fields' => 'id'));                      
+                        //print_r($file);
+                        //$archivo = $driveService->files->get($file->id);
+                        //print_r($archivo);
+
+                        if( $this->modeloSalida->updatePdf($_POST['id'], $file->id) ){
+                            echo "<script>
+                            swal_alert('Atención', 'SE SUBIO EL PDF', 'success', 'Aceptar');
+                            cargarPdf();
+                            </script>";
+                        }
+                    } catch (Exception $e) {
+                        echo "Error Message: " . $e;
+                    }
+                }
+            }else{
+                echo "<script>swal_alert('Atención', 'SELECCIONE UN PDF', 'info', 'Aceptar')</script>";
+            }
+        }
+    }
+
+    public function cargarPdf(){
+        if( $this->request->isAJAX() ){
+            if( $salida = $this->modeloSalida->getSalida($_POST['id']) ){
+                if( $salida['pdf'] != '' ){
+                    echo "
+                    <a href='https://drive.google.com/file/d/".$salida['pdf']."/view' target='_blank'>ver pdf</a> 
+                    &nbsp;&nbsp;<a onclick='eliminarPdf(\"".$salida['pdf']."\")' title='Eliminar'><i class='fas fa-trash-alt'></i></a>";
+                }else{
+                    echo "No se ha cargado algún pdf.";
+                }
+            }else{
+                echo "<script>swal_alert('Error', 'ALGO SALIO MAL', 'error', 'Aceptar')</script>";
+                exit();
+            }
+        }
+    }
+
+    public function eliminarPdf(){
+        if( $this->request->isAJAX() ){
+            if( $entrada = $this->modeloSalida->getSalida($_POST['id']) ){
+                try {
+                    putenv('GOOGLE_APPLICATION_CREDENTIALS=public/apis/subirarchivos-429815-061baebbc2cd.json');
+            
+                    $client = new Client();
+                    $client->useApplicationDefaultCredentials();
+                    $client->addScope(Drive::DRIVE);
+                    $driveService = new Drive($client);
+                    
+                    $content = $driveService->files->delete($_POST['fileid']);
+
+                    if( $this->modeloSalida->updatePdf($_POST['id'], NULL) ){
+                        echo "<script>
+                        swal_alert('Atención', 'SE ELIMINÓ EL PDF', 'success', 'Aceptar');
+                        cargarPdf();
+                        </script>";
+                    }
+                } catch (Exception $e) {
+                    echo "Error Message: " . $e;
+                }
+            }else{
+                echo "<script>swal_alert('Error', 'ALGO SALIO MAL', 'error', 'Aceptar')</script>";
+                exit();
+            }
+        }
+    }
+
 }

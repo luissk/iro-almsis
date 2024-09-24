@@ -26,7 +26,14 @@
                             </tr>
                             <tr>
                                 <th>Documento</th>
-                                <td><?php echo $head['documento']?></td>
+                                <td>
+                                    <?php echo $head['documento']?>
+                                    <?php
+                                    if( $head['pdf'] != '' ){
+                                        echo " <a href='https://drive.google.com/file/d/".$head['pdf']."/view' target='_blank'>ver pdf</a>";
+                                    }
+                                    ?>
+                                </td>
                             </tr>
                             <tr>
                                 <th>Comentario</th>
